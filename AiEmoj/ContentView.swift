@@ -26,6 +26,8 @@ struct ContentView: View {
  
                 Section(header: Text("prompt")){
                     TextField("prompt", text: $prompt)
+                        .disableAutocorrection(true)
+                        .textInputAutocapitalization(.never)
                 }
                 Section(header: Text("result")){
                     Text(result)
@@ -64,13 +66,15 @@ struct ContentView: View {
                     }
                     .padding(.trailing)
                     
-                    Button {
-                        
-                    }label: {
-                        Image(systemName: "doc.on.doc")
-                    }
+                  
                 }
             }.toolbar {
+                Button {
+                    UIPasteboard.general.string = result
+                }label: {
+                    Image(systemName: "doc.on.doc")
+                }
+                
                 Button {
                     showSettings = true
                 }label: {
