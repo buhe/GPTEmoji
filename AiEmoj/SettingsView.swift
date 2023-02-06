@@ -18,7 +18,7 @@ struct SettingsView: View {
                 Section(){
                     Button{
                         #if os(iOS)
-                        if let url = URL(string: "https://github.com/buhe/PingPremium/issues") {
+                        if let url = URL(string: "https://github.com/buhe/EmojPub/blob/main/Support.md") {
                             UIApplication.shared.open(url)
                         }
                         #endif
