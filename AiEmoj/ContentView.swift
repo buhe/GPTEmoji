@@ -20,7 +20,7 @@ struct ContentView: View {
                 VStack(alignment: .leading){
                     Text("🍾")
                         .font(.system(size: 96))
-                    Text("Generate multiple emojis at once")
+                    Text("Generate emojis by prompt")
                     Text("Copy and immediately use in your favorite apps!")
                 }
  
