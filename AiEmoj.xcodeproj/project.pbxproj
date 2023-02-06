@@ -18,6 +18,7 @@
 		3FD4DB76298FCB52009AB33E /* AiEmojUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB75298FCB52009AB33E /* AiEmojUITestsLaunchTests.swift */; };
 		3FD4DB832990B384009AB33E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB822990B384009AB33E /* SettingsView.swift */; };
 		3FD4DB852990B3D6009AB33E /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB842990B3D6009AB33E /* Ex.swift */; };
+		3FD4DB882990D63D009AB33E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3FD4DB872990D63D009AB33E /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD4DB882990D63D009AB33E /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,9 @@
 			dependencies = (
 			);
 			name = AiEmoj;
+			packageProductDependencies = (
+				3FD4DB872990D63D009AB33E /* SwiftyJSON */,
+			);
 			productName = AiEmoj;
 			productReference = 3FD4DB4F298FCB51009AB33E /* AiEmoj.app */;
 			productType = "com.apple.product-type.application";
@@ -229,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 3FD4DB46298FCB51009AB33E;
+			packageReferences = (
+				3FD4DB862990D63D009AB33E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 3FD4DB50298FCB51009AB33E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -630,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3FD4DB862990D63D009AB33E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3FD4DB872990D63D009AB33E /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FD4DB862990D63D009AB33E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		3FD4DB56298FCB51009AB33E /* AiEmoj.xcdatamodeld */ = {

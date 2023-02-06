@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
+import SwiftyJSON
 
 struct ContentView: View {
     @State var prompt = ""
@@ -32,7 +32,28 @@ struct ContentView: View {
                 }
                 HStack {
                     Button {
-                        
+                        DispatchQueue.global(qos: .background).async {
+                            let url = URL(string: "https://www.emojai.app/api/generate")!
+                            var request = URLRequest(
+                                        url: url,
+                                        cachePolicy: .reloadIgnoringLocalCacheData
+                                    )
+                                    
+                            request.httpMethod = "POST"
+                            let payload = ["emoji": prompt]
+                            let json = JSON(payload)
+                            request.httpBody = try! json.rawData()
+                            
+                            let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                                guard let data = data else { return }
+                                print(String(data: data, encoding: .utf8)!)
+                                DispatchQueue.main.async {
+                                    result = try! JSON(data: data)["result"].stringValue
+                                }
+                            }
+
+                            task.resume()
+                        }
                     }label: {
                         Text("Find")
                     }
