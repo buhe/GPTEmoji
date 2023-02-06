@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var prompt = ""
     @State var result = ""
     
+    @State var showSettings = false
+    
     var body: some View {
         NavigationView {
             Form {
@@ -44,10 +46,13 @@ struct ContentView: View {
                 }
             }.toolbar {
                 Button {
-                    
+                    showSettings = true
                 }label: {
                     Image(systemName: "gear")
                 }
+            }
+            .sheet(isPresented: $showSettings){
+                SettingsView()
             }
         }
     }

@@ -16,6 +16,8 @@
 		3FD4DB6A298FCB52009AB33E /* AiEmojTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB69298FCB52009AB33E /* AiEmojTests.swift */; };
 		3FD4DB74298FCB52009AB33E /* AiEmojUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB73298FCB52009AB33E /* AiEmojUITests.swift */; };
 		3FD4DB76298FCB52009AB33E /* AiEmojUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB75298FCB52009AB33E /* AiEmojUITestsLaunchTests.swift */; };
+		3FD4DB832990B384009AB33E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB822990B384009AB33E /* SettingsView.swift */; };
+		3FD4DB852990B3D6009AB33E /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB842990B3D6009AB33E /* Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3FD4DB6F298FCB52009AB33E /* AiEmojUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiEmojUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD4DB73298FCB52009AB33E /* AiEmojUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiEmojUITests.swift; sourceTree = "<group>"; };
 		3FD4DB75298FCB52009AB33E /* AiEmojUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiEmojUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FD4DB822990B384009AB33E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3FD4DB842990B3D6009AB33E /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				3FD4DB5D298FCB52009AB33E /* AiEmoj.entitlements */,
 				3FD4DB56298FCB51009AB33E /* AiEmoj.xcdatamodeld */,
 				3FD4DB5E298FCB52009AB33E /* Preview Content */,
+				3FD4DB822990B384009AB33E /* SettingsView.swift */,
+				3FD4DB842990B3D6009AB33E /* Ex.swift */,
 			);
 			path = AiEmoj;
 			sourceTree = "<group>";
@@ -265,7 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD4DB832990B384009AB33E /* SettingsView.swift in Sources */,
 				3FD4DB53298FCB51009AB33E /* AiEmojApp.swift in Sources */,
+				3FD4DB852990B3D6009AB33E /* Ex.swift in Sources */,
 				3FD4DB58298FCB51009AB33E /* AiEmoj.xcdatamodeld in Sources */,
 				3FD4DB5A298FCB51009AB33E /* ContentView.swift in Sources */,
 				3FD4DB55298FCB51009AB33E /* Persistence.swift in Sources */,
