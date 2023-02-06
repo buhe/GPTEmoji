@@ -54,6 +54,10 @@ struct ContentView: View {
                             request.httpBody = try! json.rawData()
                             
                             let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
+                                if let error = error {
+                                    print(error)
+                                    loading.toggle()
+                                }
                                 guard let data = data else { return }
                                 print(String(data: data, encoding: .utf8)!)
                                 DispatchQueue.main.async {
