@@ -40,8 +40,13 @@ struct ContentView: View {
                                     )
                                     
                             request.httpMethod = "POST"
+                            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+                            request.addValue("application/json", forHTTPHeaderField: "Accept")
+
                             let payload = ["emoji": prompt]
+                            
                             let json = JSON(payload)
+                            print(json)
                             request.httpBody = try! json.rawData()
                             
                             let task = URLSession.shared.dataTask(with: request) {(data, response, error) in
