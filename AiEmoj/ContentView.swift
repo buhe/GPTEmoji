@@ -11,11 +11,12 @@ import SwiftyJSON
 struct ContentView: View {
     @State var prompt = ""
     @State var result = ""
+    @State var loading = false
     
     @State var showSettings = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Form {
                 VStack(alignment: .leading){
                     Text("🍾")
@@ -34,6 +35,7 @@ struct ContentView: View {
                 }
                 HStack {
                     Button {
+                        loading.toggle()
                         DispatchQueue.global(qos: .background).async {
                             let url = URL(string: "https://www.emojai.app/api/generate")!
                             var request = URLRequest(
@@ -55,6 +57,7 @@ struct ContentView: View {
                                 guard let data = data else { return }
                                 print(String(data: data, encoding: .utf8)!)
                                 DispatchQueue.main.async {
+                                    loading.toggle()
                                     result = try! JSON(data: data)["result"].stringValue
                                 }
                             }
@@ -62,9 +65,10 @@ struct ContentView: View {
                             task.resume()
                         }
                     }label: {
-                        Text("Find")
+                        Text(loading ? "Finding" : "Find")
                     }
                     .padding(.trailing)
+                    .disabled(loading)
                     
                   
                 }
