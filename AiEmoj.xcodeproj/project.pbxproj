@@ -19,6 +19,8 @@
 		3FD4DB832990B384009AB33E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB822990B384009AB33E /* SettingsView.swift */; };
 		3FD4DB852990B3D6009AB33E /* Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB842990B3D6009AB33E /* Ex.swift */; };
 		3FD4DB882990D63D009AB33E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 3FD4DB872990D63D009AB33E /* SwiftyJSON */; };
+		3FD4DB8A29951E6A009AB33E /* GetEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB8929951E6A009AB33E /* GetEmojiView.swift */; };
+		3FD4DB8C29951E8A009AB33E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB8B29951E8A009AB33E /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		3FD4DB75298FCB52009AB33E /* AiEmojUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiEmojUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FD4DB822990B384009AB33E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3FD4DB842990B3D6009AB33E /* Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ex.swift; sourceTree = "<group>"; };
+		3FD4DB8929951E6A009AB33E /* GetEmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmojiView.swift; sourceTree = "<group>"; };
+		3FD4DB8B29951E8A009AB33E /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				3FD4DB5E298FCB52009AB33E /* Preview Content */,
 				3FD4DB822990B384009AB33E /* SettingsView.swift */,
 				3FD4DB842990B3D6009AB33E /* Ex.swift */,
+				3FD4DB8929951E6A009AB33E /* GetEmojiView.swift */,
+				3FD4DB8B29951E8A009AB33E /* HistoryView.swift */,
 			);
 			path = AiEmoj;
 			sourceTree = "<group>";
@@ -280,8 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD4DB832990B384009AB33E /* SettingsView.swift in Sources */,
+				3FD4DB8C29951E8A009AB33E /* HistoryView.swift in Sources */,
 				3FD4DB53298FCB51009AB33E /* AiEmojApp.swift in Sources */,
 				3FD4DB852990B3D6009AB33E /* Ex.swift in Sources */,
+				3FD4DB8A29951E6A009AB33E /* GetEmojiView.swift in Sources */,
 				3FD4DB58298FCB51009AB33E /* AiEmoj.xcdatamodeld in Sources */,
 				3FD4DB5A298FCB51009AB33E /* ContentView.swift in Sources */,
 				3FD4DB55298FCB51009AB33E /* Persistence.swift in Sources */,
@@ -437,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AiEmoj/AiEmoj.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AiEmoj/Preview Content\"";
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -459,7 +467,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.AiEmoj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -477,7 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = AiEmoj/AiEmoj.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AiEmoj/Preview Content\"";
 				DEVELOPMENT_TEAM = N22PJBS26Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -499,7 +507,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.buhe.AiEmoj;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
