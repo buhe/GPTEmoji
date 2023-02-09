@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftyJSON
 
 struct GetEmojiView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    
     @State var prompt = ""
     @State var result = ""
     @State var loading = false
@@ -63,6 +65,7 @@ struct GetEmojiView: View {
                                 DispatchQueue.main.async {
                                     loading.toggle()
                                     result = try! JSON(data: data)["result"].stringValue
+                                    addItem(emoji: result)
                                 }
                             }
 
@@ -89,10 +92,27 @@ struct GetEmojiView: View {
             
         }
     }
+    
+    private func addItem(emoji: String) {
+           withAnimation {
+               let newItem = Item(context: viewContext)
+               newItem.timestamp = Date()
+               newItem.emoji = emoji
+               do {
+                   try viewContext.save()
+               } catch {
+                   // Replace this implementation with code to handle the error appropriately.
+                   // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                   let nsError = error as NSError
+                   fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+               }
+           }
+       }
 }
 
 struct GetEmojiView_Previews: PreviewProvider {
     static var previews: some View {
         GetEmojiView()
+            .environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

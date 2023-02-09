@@ -13,7 +13,8 @@ struct AiEmojApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let viewModel = HistoryViewModel()
+            ContentView(viewModel: viewModel)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

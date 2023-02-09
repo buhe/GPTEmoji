@@ -9,16 +9,21 @@ import SwiftUI
 
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    let viewModel: HistoryViewModel
+    
     var body: some View {
         TabView {
             GetEmojiView()
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     VStack {
                         Image(systemName: "face.smiling")
                         Text("Find")
                     }
                 }
-            HistoryView()
+            HistoryView(viewModel: viewModel)
+                .environment(\.managedObjectContext, viewContext)
                 .tabItem {
                     VStack {
                         Image(systemName: "clock")
@@ -39,6 +44,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        ContentView(viewModel: HistoryViewModel()).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
