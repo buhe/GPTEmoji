@@ -21,7 +21,7 @@ class HistoryViewModel: ObservableObject {
                 result[key]!.emojis.append(item.emoji!)
             }
         }
-        return Array(result.values)
+        return result.sorted(by: {a,b in (a.key.compare(b.key)).rawValue > 0}).map{$0.1}
     }
 }
 
