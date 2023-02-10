@@ -27,6 +27,8 @@ struct HistoryView: View {
 }
 
 struct DayView: View {
+    @State private var showingAlert = false
+    
     let day: Day
     var body: some View {
         VStack(alignment: .leading) {
@@ -37,9 +39,17 @@ struct DayView: View {
                 
                 emoji in
                 Text(emoji)
+                    .onTapGesture {
+                        showingAlert = true
+                        UIPasteboard.general.string = emoji
+                    }
+                
                 //                    .frame(width:22, height: 22)
                 
             }
+        }
+        .alert("Copy to your Pasteboard.", isPresented: $showingAlert){
+            Button("OK", role: .cancel) { }
         }
     }
 }
