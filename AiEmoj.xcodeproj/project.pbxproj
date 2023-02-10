@@ -22,6 +22,7 @@
 		3FD4DB8A29951E6A009AB33E /* GetEmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB8929951E6A009AB33E /* GetEmojiView.swift */; };
 		3FD4DB8C29951E8A009AB33E /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB8B29951E8A009AB33E /* HistoryView.swift */; };
 		3FD4DB8E29952F01009AB33E /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD4DB8D29952F01009AB33E /* HistoryViewModel.swift */; };
+		3FD4DB9129962F14009AB33E /* WrappingHStack in Frameworks */ = {isa = PBXBuildFile; productRef = 3FD4DB9029962F14009AB33E /* WrappingHStack */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD4DB9129962F14009AB33E /* WrappingHStack in Frameworks */,
 				3FD4DB882990D63D009AB33E /* SwiftyJSON in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +172,7 @@
 			name = AiEmoj;
 			packageProductDependencies = (
 				3FD4DB872990D63D009AB33E /* SwiftyJSON */,
+				3FD4DB9029962F14009AB33E /* WrappingHStack */,
 			);
 			productName = AiEmoj;
 			productReference = 3FD4DB4F298FCB51009AB33E /* AiEmoj.app */;
@@ -245,6 +248,7 @@
 			mainGroup = 3FD4DB46298FCB51009AB33E;
 			packageReferences = (
 				3FD4DB862990D63D009AB33E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				3FD4DB8F29962F14009AB33E /* XCRemoteSwiftPackageReference "WrappingHStack" */,
 			);
 			productRefGroup = 3FD4DB50298FCB51009AB33E /* Products */;
 			projectDirPath = "";
@@ -662,6 +666,14 @@
 				kind = branch;
 			};
 		};
+		3FD4DB8F29962F14009AB33E /* XCRemoteSwiftPackageReference "WrappingHStack" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dkk/WrappingHStack";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -669,6 +681,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3FD4DB862990D63D009AB33E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
 			productName = SwiftyJSON;
+		};
+		3FD4DB9029962F14009AB33E /* WrappingHStack */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3FD4DB8F29962F14009AB33E /* XCRemoteSwiftPackageReference "WrappingHStack" */;
+			productName = WrappingHStack;
 		};
 /* End XCSwiftPackageProductDependency section */
 

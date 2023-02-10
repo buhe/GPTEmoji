@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import CoreData
+import WrappingHStack
 
 struct HistoryView: View {
     @Environment(\.managedObjectContext) private var viewContext
@@ -29,7 +29,18 @@ struct HistoryView: View {
 struct DayView: View {
     let day: Day
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading) {
+            Text(day.date)
+                .font(.caption)
+                .foregroundColor(.gray)
+            WrappingHStack(day.emojis, id: \.self)  {
+                
+                emoji in
+                Text(emoji)
+                //                    .frame(width:22, height: 22)
+                
+            }
+        }
     }
 }
 

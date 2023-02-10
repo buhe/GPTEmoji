@@ -15,3 +15,10 @@ extension Bundle {
         return infoDictionary?["CFBundleVersion"] as? String
     }
 }
+
+let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+//    formatter.timeStyle = .none
+    return formatter
+}()
